@@ -1,0 +1,665 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    font-family: Open Sans, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-behavior:calc(10vh + smooth);
+}
+
+body {
+    font-family: bebas;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    background-color: #e3e3e6;
+    color: #333;
+    font-family: Poppins,"Bebas Neue", sans-serif;
+    font-weight:  400;
+    font-style:normal;
+    max-width: 100vw;
+}
+
+/*Parte superior Layaout?*/
+
+
+nav {
+    background-color: #e3e3e6;
+    color: #182801;
+    display: inline-flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    font-weight: 600;
+}
+
+.lista {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: 100vw;
+}
+
+nav li {
+    margin: 1vh 1vw;
+    padding: 1.2vh 1.5vw;
+    transition: linear 0.1s;
+    border-radius: 40px;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+
+.header {
+    background-color: #e3e3e6;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    container-type: inline-size;
+    container-name: header;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0 -10px 15px -5px #d9d9d97c,0px 15px 15px -5px #3334;
+}
+
+.header__logo {
+    max-width: 100%;
+    width: 40px;
+    margin: 0px 20px 0px 20px;
+    transition: linear 0.2s;
+}
+
+.header__logo:hover {
+    filter: drop-shadow( 0px 0px 10px #1dbf72);
+}
+
+.header__logo-container{
+    display: flex;
+    position: absolute;
+}
+
+.header__text {
+    margin: 20px auto;
+    text-wrap-mode: nowrap;
+    color: #333;
+    font-family: Open Sans, Arial, sans-serif;
+    font-weight: 700;
+    container-name: headert;
+}
+
+@media screen and (max-width: 840px) {
+    .header__text {
+        display: none;
+    }
+}  
+
+#Contacto {
+    background-color: transparent;
+    color: #333;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 0;
+    transition: linear 0.1s;
+}
+
+
+.header__nav-item {
+    list-style: none;
+}
+
+.header__checkbox, .header__nav {
+    display: none;
+}
+
+.header__open-nav-button{
+    color: #182801;
+    font-size: 3rem;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+}
+
+.header__nav {
+    display: none;
+    background-color: #e3e3e6;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin: auto;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+.header__checkbox:checked ~ .header__nav, .header__text {
+    display: flex;
+}
+
+.inicio {
+    display: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    border-radius: 20px;
+    width: max-content;
+    height: max-content;
+}
+
+@container header (min-width: 850px) {  
+    #Contacto {
+        background-color: #1dbf72;
+        color: #333;
+        box-sizing: border-box;
+        border-radius: 20px;
+        text-decoration: none;
+        margin: 0;
+        transition: linear 0.1s;
+    }
+
+    #Contacto:is(:hover,:active) {
+        background-color: transparent;
+        color: #333;
+        border: #333 1px solid;
+    }
+
+    .header__nav-item:is(:hover,:active) {
+        box-shadow: 0 0 5px 2.5px #33333337 ;
+        background-color: #1dbf72;
+        color: #333;
+        box-sizing: border-box;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+
+    .header__nav {
+        display: block;
+        position: static;
+        max-height: max-content;
+        width: auto;
+    }
+
+    .header__nav-item{
+        margin: 0px;
+    }
+
+    .header__logo-container{
+        display: flex;
+        position: sticky;
+    }
+
+    .header__logo {
+        max-width: 100%;
+        width: 40px;
+        margin: 5px 10px 5px 5dvw;
+    }
+
+    .header__text{
+        display: none;
+        max-height: min-content;
+        margin-bottom: 15px;
+    }
+
+    .header__nav-list {
+        flex-direction: row;
+        width: auto;
+        gap: 5px;
+        margin-right: 8dvw;
+        height:max-content;
+    }
+
+    .header__open-nav-button {
+        display: none;
+    }
+
+    .texto_bienvenida {
+        font-size: 3.5dvw;
+    }
+
+    .titulo_Principal {
+        font-size: 5dvw;
+    }
+
+}
+
+/*Barra de navegacion LISTA NO MODIFICAR*/
+
+/*Contenido Principal de la web*/
+
+.main__board-presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    width: 90vw;
+    padding: 10px;
+    min-height: 90vh;
+    margin: 0px auto 3vh auto;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left;
+    color: black;
+    z-index: 5;
+}
+
+.titulo_Principal {
+    width: 70vw;
+    font-family: "Playfair Display", serif; 
+    font-size: 5vw;
+    container-type: inline-size;
+}
+
+.texto_bienvenida {
+    width: 80vw;
+    font-weight: 600;
+    font-family: "Poppins"; 
+    font-size: 3vh;
+    container-type: inline-size;
+}
+
+.ws-container{
+    max-width: max-content;
+    margin-top: 5vh;
+}
+
+.ws {
+    text-wrap-mode: nowrap;
+    padding: 2.5vh 2vw;
+    margin-bottom: 5vh;
+}
+
+.ws, .ws-container{
+    color: #333;
+    background-color: #1dbf72;
+    border-radius: 10px;
+    transition: linear 0.18s;
+}
+
+.ws:hover,  .ws-container:hover{
+    filter: drop-shadow( 0 0 5px #33333333);
+}
+
+.icon-ws, .ws{
+    font-size: clamp(18px, 1vw, 1.5vw);
+}
+
+
+.img-fondo {
+    top: 45vh;
+    left: 0;
+    background-image: url(../img/LogPanPrincipal.svg);
+    position: absolute;
+    filter: drop-shadow( 0 0 20px #1dbf72);
+    width: 100vw;
+    height: 55vh;
+    background-size: 100vh ;
+    background-size:cover;
+    background-position: center;
+    opacity: 0.07;
+    z-index: -1;
+}
+
+.separator {
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 650px) {
+    .main__board-presentation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-radius: 25px;
+        width: 90vw;
+        padding: 10px;
+        max-height: 80vh;
+        margin: 0px auto 3vh auto;
+        background-color: rgba(0, 0, 0, 0);
+        text-align: left;
+        color: black;
+    }
+    
+    .titulo_Principal {
+        width: 70vw;
+        font-family: "Playfair Display", serif; 
+        font-size: 5vh;
+        container-type: inline-size;
+        margin-bottom: 1vh;
+    }
+    
+    .texto_bienvenida {
+        width: 80vw;
+        font-weight: 400;
+        font-family: "Poppins"; 
+        font-size: 2vh;
+        container-type: inline-size;
+    }
+
+}
+
+/*Incio Listo, NO MODIFICAR*/
+
+/*---------- Portafolio Section ----------*/
+
+.dispositivos {
+    background-color: #e3e3e6;
+    color: #333;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    container-name: dispositivos;
+    container-type: inline-size;
+}
+
+.dispositivos__project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 85dvw;
+    margin: 0 auto;
+    width: 100%;
+    gap: 12px;
+    padding: 12px;
+    min-height: 145vh;
+    text-align: center;
+}
+
+.dispositivos__title{
+    width: 85vw;
+    margin: 2dvh auto;
+    font-family: "Playfair Display", serif; 
+    font-size: 10vw;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.dispositivos__project {
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    border-radius: 10px;
+    place-items: top;
+    font-weight: 300;
+}
+
+.dispositivos__project:nth-child(1) {
+    background-image: linear-gradient( #000, #00000000), url(../img/iot.jpeg);
+    order: 1;
+    background-position: center;
+    background-size: 115%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #1dbf72;
+    border: 2px solid black;
+    transition: linear 0.1s;
+}
+
+.dispositivos__project:nth-child(2) {
+    background-image: linear-gradient( #000, #00000000), url(../img/Radiofrecuencia.jpeg);
+    order: 2;
+    background-position: center;
+    background-size: 133%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #1dbf72;
+    border: 2px solid black;
+    transition: linear 0.1s;
+}
+
+.dispositivos__project:nth-child(3) {
+    background-image: linear-gradient( #000, #00000000), url(../img/homeassistant.jpg);
+    order: 3;
+    background-size: 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #1dbf72;
+    border: 2px solid black;
+    transition: linear 0.1s;
+}
+
+.dispositivos__project:nth-child(4) {
+    background-image: linear-gradient( #000, #00000000), url(../img/Inteligenciaartificial.jpeg);
+    order: 4;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #1dbf72;
+    border: 2px solid black;
+    transition: linear 0.1s;
+}
+
+.dispositivos__project:nth-child(5) {
+    background-image: linear-gradient( #000, #00000000), url(../img/seguridad.jpeg);
+    order: 5;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #1dbf72;
+    border: 2px solid black;
+    transition: linear 0.1s;
+}
+
+.dispositivos__project:nth-child(6) {
+    background-image: linear-gradient( #000, #00000000), url(../img/Esp32.jpeg) ;
+    order: 6;
+    background-color: #000;
+    background-size: 250%;
+    background-repeat: no-repeat;
+    color: #1dbf72;
+    border: 2px solid black;
+    transition: linear 0.1s;
+}
+
+.dispositivos__project:hover {
+    opacity: 0.90;
+    outline: 1px solid #000;
+    box-shadow: 0px 0px 25px #1dbf72;
+}
+
+.dispositivos__project-item{
+    max-height: fit-content;
+    margin: 4dvh auto;
+    max-height: fit-content;
+}
+
+.dispositivos__project-item2{
+    max-height: fit-content;
+    place-content: top;
+}
+
+.dispositivos__project-item, .dispositivos__project-item2, .dispositivos__project-subcontainer {
+    color: #e3e3e3;
+}
+
+.dispositivos__project-subcontainer {
+    margin: 2vh 1vw;
+}
+
+.dispositivos__title {
+    font-size: calc(3dvh + 1.5dvw );
+}
+
+.dispositivos__subtitle {
+    font-size: calc(1.5dvh + 1dvw );
+    margin: 2dvh auto;
+}
+
+/* ---------- dispositivos QUERIES ---------- */
+
+@container dispositivos (min-width: 1400px) {
+    .dispositivos__project-container {
+        max-width: 80vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .dispositivos__project:nth-child(6) {
+        grid-column: 3 / 5; 
+        grid-row: 2 / 3;
+    }
+    .dispositivos__project:nth-child(5) {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1400px) {
+    .dispositivos__project-container {
+        max-width: 80vw;
+        grid-template-columns: 1fr 1fr 1fr;
+        min-height: 80vh;
+    }
+}
+
+@container dispositivos (max-width: 700px) {
+    .dispositivos__project-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*---------------Footer-------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/*:::::Pie de Pagina*/
+.pie-pagina{
+    margin-top: 5vh;
+    width: 100dvw;
+    background-color: #1f2023;
+    transition: linear 0.2s;
+}
+
+.pie-pagina:hover{
+    box-shadow: 0px 0px 20px #1dbf72;
+    z-index: 1;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #1dbf72;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #e3e3e3;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #1f2023;
+    margin-right: 10px;
+    background-color: #e3e3e3;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #1dbf72;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #e3e3e6;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+.logo__footer {
+    max-width: 10dvw;
+    min-width: 64px;
+    filter: drop-shadow( 0 0 10px #0000);
+    transition: 0.4s;
+}
+
+.logo__footer:hover {
+    filter: drop-shadow( 0 0 5px #e3e3e6);
+}
+
+.redes2 {
+    display: flex;
+    flex-direction: row;
+    text-wrap-mode: nowrap;
+    color: #e3e3e3  ;
+    transition: linear 0.2s;
+    letter-spacing: 2px;
+    font-family: "Poppins"; 
+    margin: auto;
+}
+
+#redes3 {
+    margin-left: 8px;
+    transition: linear 0.2s;
+}
+
+.redes2:hover {
+    color: #1dbf72;
+    #redes3 {
+        color: #1dbf72;
+    }
+}
+
+.text-final, .box, .box-title {
+    font-size: calc(1.5dvh + 0.7dvw);
+}
+
+@media screen and (max-width:840px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+
+    .box {
+        max-width: 80dvw;
+        margin: auto;
+    }
+}
