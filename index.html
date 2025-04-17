@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noarchive">
+
+    <title>E-vio Labs</title>
+
+    <link rel="stylesheet" href="ccs/Index.css">
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<script>
+    function closeMenu() {
+        document.getElementById('open-menu').checked = false;
+    }
+</script>
+<body>
+    <header class="header">
+        <input type="checkbox" id="open-menu" class="header__checkbox">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label> 
+        <div class="header__logo-container">
+            <img class="header__logo" src="img/monogram-black-hq.png" >
+        </div>
+        <p class="header__text">E-vio Labs</p>
+        <nav class="nav, header__nav">
+            <ul class="lista, header__nav-list">
+                <a href="#Inicio" onclick="closeMenu()"><li class="Inicio, header__nav-item">Inicio</li></a>
+                <a href="#Inicio" onclick="closeMenu()"><li class="Nosotros, header__nav-item">Nosotros</li></a>
+                <a href="#Proyectos" onclick="closeMenu()"><li class="Proyectos, header__nav-item">Proyectos</li></a>
+                <a href="#Servicios" onclick="closeMenu()"><li class="Servicios, header__nav-item">Servicios</li></a>
+                <a href="#Contacto" onclick="closeMenu()"><li class="header__nav-item" id="Contacto">Contacto</li></a>
+            </ul>
+        </nav>
+    </header>
+    <main id="Inicio" class="main__board-presentation">
+        <div class="img-fondo"></div>
+        <h1 class="titulo_Principal">
+            Tecnología que evoluciona con visión solo para Tí
+        </h1>
+        <h2 class="texto_bienvenida">
+            E-vio Labs es una empresa emergente enfocada en electrónica, automatización e IoT, combinando eficiencia y visión innovadora para transformar la tecnología en soluciones prácticas. Su equipo desarrolla sistemas inteligentes para optimizar procesos en hogares y empresas, integrando diseño moderno y tecnología avanzada para mejorar la vida cotidiana.
+        </h2>
+        <p class="ws-container" id="Proyectos">
+            <a href="https://wa.me/message/IYFFVJZJFHDHL1"  target="_blank" class="ws"><i class="fa-brands fa-whatsapp icon-ws"></i> - Escribenos a nuestro Whatsapp</a>
+        </p>
+        <div class="separator"></div>
+    </main>
+    <section class="dispositivos">
+        <h2 class="dispositivos__title" id="#Proyectos">Al maximo con su gran rendimiento y prestaciones.</h2>
+        <div class="dispositivos__project-container">
+            <div class="dispositivos__project">
+                <div class="dispositivos__project-subcontainer">
+                    <h2 class="dispositivos__project-item">
+                        Instalaciones IoT
+                    </h2>
+                    <p class="dispositivos__project-item2">
+                        El internet de las cosas, conexiones entre dispositivos controlados desde cualquier parte del mundo.
+                    </p>
+                </div>
+            </div>
+            <div class="dispositivos__project">
+                <div class="dispositivos__project-subcontainer">
+                    <h2 class="dispositivos__project-item">
+                        Comunicación Por Radio Frecuencia
+                    </h2>
+                    <p class="dispositivos__project-item2">
+                        Comunicación constante sin necesidad de Wifi ni Bluetooth, de largo alcance dependiendo de las necesidades del usuario.
+                    </p>
+                </div>
+            </div>
+            <div class="dispositivos__project">
+                <div class="dispositivos__project-subcontainer">
+                    <h2 class="dispositivos__project-item">
+                        Home Assistant
+                    </h2>
+                    <p class="dispositivos__project-item2">
+                        Home Assistant es un software de automatización del hogar que permite integrar y controlar dispositivos inteligentes de forma centralizada.
+                    </p>
+                </div>
+            </div>
+            <div class="dispositivos__project">
+                <div class="dispositivos__project-subcontainer">
+                    <h2 class="dispositivos__project-item">
+                        Inteligencia Artificial
+                    </h2>
+                    <p class="dispositivos__project-item2">
+                        Integrar IA en ESP32 hace que los dispositivos sean más autónomos y eficientes, permitiendo soluciones rápidas y seguras en IoT, domótica y automatización sin depender de la nube.
+                    </p>
+                </div>
+            </div>
+            <div class="dispositivos__project">
+                <div class="dispositivos__project-subcontainer">
+                    <h2 class="dispositivos__project-item">
+                        Sistemas locales con seguridad Avanzada
+                    </h2>
+                    <p class="dispositivos__project-item2">
+                        La integración de ESP32 con RFID, huellas y reconocimiento facial permite crear sistemas de seguridad autónomos, mejorando el control de accesos sin depender de servidores externos.
+                    </p>
+                </div>
+            </div>
+            <div class="dispositivos__project">
+                <div class="dispositivos__project-subcontainer">
+                    <h2 class="dispositivos__project-item">
+                        ESP-32 S3 DevKit-v1
+                    </h2>
+                    <p class="dispositivos__project-item2">
+                        La ESP32-S3 DevKit-V1 es un pequeño pero poderoso cerebro para proyectos tecnológicos. Es más rápida, tiene mayor capacidad y mejor conexión, permitiendo automatización avanzada sin necesidad de grandes equipos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </Section>
+</body>
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#Inicio">
+                <img src="img/favicon3.svg" alt="Logo" class="logo__footer">
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2 class="box-title">Ubicación</h2>
+            <p class="text-final">No somos tienda fisica, estamos disponibles por el Mun. Libertador en Caracas, Venezuela <br><br> ______________________________ <br><br><br>Terminos y Condiciones - Politicas de seguridad - Copyright 2032®
+        </div>
+        <div class="box">
+            <h2 class="box-title">Escribenos por acá</h2>
+            <div class="red-social">
+                <a href="https://wa.me/message/IYFFVJZJFHDHL1"  target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/antwhony_f/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p> 
+                <br><br> 
+                <h2 class="box-title">Redes</h2>
+                <a href="https://www.instagram.com/antwhony_f/" target="_blank" class="redes2" >
+                    <i class="fa-brands fa-instagram redes2">
+                        antwhony_f
+                    </i> 
+                </a>
+                <a href="https://www.instagram.com/antwhony_f/" target="_blank" class="redes2" >
+                    <i class="fa-brands fa-instagram redes2">
+                        antwhony_f
+                    </i> 
+                </a>
+                <a href="https://www.instagram.com/luis272007/" target="_blank" class="redes2" >
+                    <i class="fa-brands fa-instagram redes2">
+                        luis272007
+                    </i> 
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+</html>
