@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-behavior:calc(10vh + smooth);
+    scroll-behavior:smooth;
 }
 
 body {
@@ -304,6 +304,12 @@ a {
     font-size: clamp(18px, 1vw, 1.5vw);
 }
 
+@media screen and (max-width: 330px) {
+    .ws {
+        font-size: 4.0vw;
+    }
+}
+
 
 .img-fondo {
     top: 45vh;
@@ -412,7 +418,7 @@ a {
     background-image: linear-gradient( #000, #00000000), url(../img/iot.jpeg);
     order: 1;
     background-position: center;
-    background-size: 115%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: #000;
     color: #1dbf72;
@@ -424,7 +430,7 @@ a {
     background-image: linear-gradient( #000, #00000000), url(../img/Radiofrecuencia.jpeg);
     order: 2;
     background-position: center;
-    background-size: 133%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: #000;
     color: #1dbf72;
@@ -435,7 +441,7 @@ a {
 .dispositivos__project:nth-child(3) {
     background-image: linear-gradient( #000, #00000000), url(../img/homeassistant.jpg);
     order: 3;
-    background-size: 130%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #000;
@@ -447,7 +453,7 @@ a {
 .dispositivos__project:nth-child(4) {
     background-image: linear-gradient( #000, #00000000), url(../img/Inteligenciaartificial.jpeg);
     order: 4;
-    background-size: 160%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: #000;
     color: #1dbf72;
@@ -458,7 +464,7 @@ a {
 .dispositivos__project:nth-child(5) {
     background-image: linear-gradient( #000, #00000000), url(../img/seguridad.jpeg);
     order: 5;
-    background-size: 100%;
+    background-size:cover;
     background-repeat: no-repeat;
     background-color: #000;
     color: #1dbf72;
@@ -470,7 +476,7 @@ a {
     background-image: linear-gradient( #000, #00000000), url(../img/Esp32.jpeg) ;
     order: 6;
     background-color: #000;
-    background-size: 250%;
+    background-size: cover;
     background-repeat: no-repeat;
     color: #1dbf72;
     border: 2px solid black;
@@ -540,7 +546,273 @@ a {
     .dispositivos__project-container {
         grid-template-columns: 1fr;
     }
+    .texto_bienvenida {
+        font-size: 1dvw;
+    }
 }
+
+/*Contacto*/
+
+.contacto__container {
+    min-height: 90vh;
+    min-width: 100vw;
+}
+
+.article-primary {
+    min-height: 70vh;
+    background-image:  linear-gradient(#002,#0000), url(../img/redes.svg);
+    background-size: contain;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: #e3e3e3;
+    display: flex;
+    margin-top: 2vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.article-seconday {
+    max-height: 100vh;
+    background-color: #1dbf72;
+    color: #000;
+    display: flex;
+}
+
+.contacto__container-subcontainer2 {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 85vw;
+    min-height: 22vh;
+    
+}
+
+.title-secondary, .article-button {
+    max-width: max-content;
+    margin: auto;
+    font-size: 2.5vh;
+    padding: 1.8vh 1.5vw;
+}
+
+.article-button1 {
+    margin: auto 1vw auto 0px;
+    height: fit-content;
+}
+
+.article-button2 {
+    margin: auto auto auto 1vw;
+}
+
+.title-secondary {
+    font-weight: 600;
+    padding: 0;
+    font-size: 4vh;
+    margin: auto 2vw auto auto;
+    font-family: "Poppins";
+}
+
+
+@media screen and (max-width: 400px) {
+    #t_s { 
+        font-size: 8.0vw;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .title-secondary {
+        min-width: 80vw;
+    }
+
+    .article-button2 {
+        margin: auto 2vw auto 1vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .title-secondary {
+        font-size: 3vh;
+        margin: 1vh auto 0px auto;
+        max-height: fit-content;
+    }
+
+    .article-button1{
+        margin-top: auto;
+    }
+
+    .article-button{
+        font-size: 2vh;
+        margin-bottom: 2vh;
+    }
+
+    .contacto__container-subcontainer2 {
+        height: m;
+    }
+
+    .article-primary {
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .article-button{
+        font-size: 2vh;
+        margin:1vh auto;
+    }
+
+}
+
+.article-button {
+    border-radius: 20px;
+    background-color: #000;
+    color: #e3e3e3;
+}
+
+.title-primary{
+    max-width: 60vw;
+    font-size: 4vw;
+    text-wrap-mode: wrap;
+    font-family: "Playfair Display", serif; 
+    text-align: left;
+}
+
+.article-text {
+    text-align: left;
+    max-width: fit-content;
+}
+
+.text1{
+    margin-top: 2vh;
+    font-family: "Poppins";
+    max-width: 60vw;
+    text-align: left;
+}
+
+.text2{
+    padding: 1vh 3vw;
+    background-color: #1dbf72;
+    color: #000;
+    border-radius: 15px;
+    font-family: "Poppins";
+    text-align: left;
+    max-width: fit-content;
+    transition: 0.25s linear;
+}
+
+.text2:hover{
+    box-shadow: 0 0 15px #1dbf72;
+}
+
+.contacto__container-subcontainer {
+    min-height: 40vh;
+    min-width: 70vw;
+    margin: auto auto auto 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+    .text2, .text1, .title-primary {
+        margin: auto;
+    }
+
+    .text1 {
+        font-size: 3.5vw;
+    }
+
+    .title-primary {
+        font-size: 6vw;
+    }
+
+    .contacto__container-subcontainer {
+        min-width: 95vw;
+        min-height: 55vh;
+        background-size: cover;
+        background-position: center;
+        margin: auto;
+    }
+
+    .article-primary{
+        background-position: center;
+    }
+}
+
+/*Preguntas frecuentes*/
+
+.title__secondary, .btn-acordeon {
+    font-family: "Poppins"; 
+    border-radius: 15px;
+}
+
+.title__secondary {
+    font-size: clamp(100px, 10vw, 10vw);
+    text-decoration: underline;
+    text-align: left;
+    width: fit-content;
+    font-weight: 600;
+    text-wrap-mode: wrap;
+}
+
+.contenedor-acordeon, .btn-acordeon, .acordeon {
+    border-radius: 25px;
+}
+
+.contenedor-acordeon {
+    width: 100%;
+    max-width: 85vw;
+    margin: 5vh auto auto auto;
+}
+.contenedor-acordeon h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+.acordeon {
+    border: 1px solid #333;
+    background: #333;
+    margin-bottom: 5px;
+    color: #e3e3e3;
+    font-weight: 600;
+    font-family: "Poppins"; 
+}
+.btn-acordeon {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    border: 10px solid #333;
+    background: #e3e3e3;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.btn-acordeon:hover {
+    background: #2d2d2d;
+    color: #e3e3e3;
+    box-shadow: 0px 0px 10px #333133;
+}
+.contenido-acordeon {
+    padding: 0px;
+    margin: 0px 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 300ms ease, padding 300ms ease;
+}
+.contenido-acordeon.active {
+    max-height: 600px;
+    padding: 15px 0px;
+}
+
+.btn-acordeon.active {
+    background: #333;
+    color: #e3e3e3;
+    box-shadow: 0px 0px 8px #e3e3e3;
+}
+
 
 /*---------------Footer-------------*/
 
@@ -561,7 +833,7 @@ a {
 
 .pie-pagina .grupo-1{
     width: 100%;
-    max-width: 1200px;
+    max-width: 85vw;
     margin: auto;
     display:grid;
     grid-template-columns: repeat(3, 1fr);
