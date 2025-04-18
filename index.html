@@ -42,6 +42,24 @@
     function closeMenu() {
         document.getElementById('open-menu').checked = false;
     }
+    function toggleAcordeon(id) {
+    const acordeon = document.getElementById(`acordeon${id}`);
+    acordeon.classList.toggle("active");
+    }
+    function toggleAcordeon(id) {
+    var acordeon = document.getElementById('acordeon' + id);
+    var boton = document.querySelector(`button[onclick="toggleAcordeon(${id})"]`);
+
+    // Alternar clase 'active'
+    if (acordeon.classList.contains('active')) {
+        acordeon.classList.remove('active');
+        boton.classList.remove('active'); // Remover clase activa del botón
+    } else {
+        acordeon.classList.add('active');
+        boton.classList.add('active'); // Añadir clase activa al botón
+    }
+    }
+
 </script>
 <body>
     <header class="header">
@@ -54,28 +72,28 @@
         <nav class="nav, header__nav">
             <ul class="lista, header__nav-list">
                 <a href="#Inicio" onclick="closeMenu()"><li class="Inicio, header__nav-item">Inicio</li></a>
-                <a href="#Inicio" onclick="closeMenu()"><li class="Nosotros, header__nav-item">Nosotros</li></a>
-                <a href="#Proyectos" onclick="closeMenu()"><li class="Proyectos, header__nav-item">Proyectos</li></a>
-                <a href="#Servicios" onclick="closeMenu()"><li class="Servicios, header__nav-item">Servicios</li></a>
+                <a href="#Inicio2" onclick="closeMenu()"><li class="Nosotros, header__nav-item">Nosotros</li></a>
+                <a href="#Servicios" onclick="closeMenu()"><li class="Proyectos, header__nav-item">Servicios</li></a>
+                <a href="#Preguntas" onclick="closeMenu()"><li class="Servicios, header__nav-item">Preguntas Frecuentes</li></a>
                 <a href="#Contacto" onclick="closeMenu()"><li class="header__nav-item" id="Contacto">Contacto</li></a>
             </ul>
         </nav>
     </header>
     <main id="Inicio" class="main__board-presentation">
-        <div class="img-fondo"></div>
-        <h1 class="titulo_Principal">
+        <div class="img-fondo" ></div>
+        <h1 class="titulo_Principal" id="Inicio2">
             Tecnología que evoluciona con visión solo para Tí
         </h1>
         <h2 class="texto_bienvenida">
             E-vio Labs es una empresa emergente enfocada en electrónica, automatización e IoT, combinando eficiencia y visión innovadora para transformar la tecnología en soluciones prácticas. Su equipo desarrolla sistemas inteligentes para optimizar procesos en hogares y empresas, integrando diseño moderno y tecnología avanzada para mejorar la vida cotidiana.
         </h2>
-        <p class="ws-container" id="Proyectos">
+        <p class="ws-container">
             <a href="https://wa.me/message/IYFFVJZJFHDHL1"  target="_blank" class="ws"><i class="fa-brands fa-whatsapp icon-ws"></i> - Escribenos a nuestro Whatsapp</a>
         </p>
         <div class="separator"></div>
     </main>
     <section class="dispositivos">
-        <h2 class="dispositivos__title" id="#Proyectos">Al maximo con su gran rendimiento y prestaciones.</h2>
+        <h2 class="dispositivos__title" id="Servicios">Al maximo con su gran rendimiento y prestaciones.</h2>
         <div class="dispositivos__project-container">
             <div class="dispositivos__project">
                 <div class="dispositivos__project-subcontainer">
@@ -127,18 +145,92 @@
                     </p>
                 </div>
             </div>
-            <div class="dispositivos__project">
+            <div class="dispositivos__project"  >
                 <div class="dispositivos__project-subcontainer">
                     <h2 class="dispositivos__project-item">
                         ESP-32 S3 DevKit-v1
                     </h2>
-                    <p class="dispositivos__project-item2">
+                    <p class="dispositivos__project-item2" >
                         La ESP32-S3 DevKit-V1 es un pequeño pero poderoso cerebro para proyectos tecnológicos. Es más rápida, tiene mayor capacidad y mejor conexión, permitiendo automatización avanzada sin necesidad de grandes equipos.
                     </p>
                 </div>
             </div>
         </div>
     </Section>
+
+    <section class="contacto__container" id="Contacto">
+        <article class="article-primary">
+            <div class="contacto__container-subcontainer">
+                <h3 class="title-primary">Puedes contactarnos por correo o directamente en nuestras redes sociales</h3>
+                <p class="article-text text1">
+                    Mandanos un mensaje a esta direccion, contestaremos lo mas rapido posible, gracias por ayudarnos a colaborar para impulsar nuestra socidedad a un futuro mejor.
+                </p>
+                <p class="article-text text2">
+                    anthojvf@gmail.com
+                </p>
+            </div>
+        </article>
+        <article class="article-seconday">
+            <div class="contacto__container-subcontainer2">
+                <h4 class="title-secondary">Deje que el sistema trabaje por usted:</h4>
+                <p class="article-button article-button1">Instalaciones Domesticas</p>
+                <p class="article-button article-button2">Instalaciones Industriales</p>
+            </div>
+        </article>
+    </section>
+
+    <section class="contenedor-acordeon" id="Preguntas">
+        <h2 class="title__secondary" id="t_s">Top preguntas frecuentes </h2>
+    
+        <div class="acordeon">
+            <button class="btn-acordeon" onclick="toggleAcordeon(1)">¿Cuál es la misión de E-vio Labs?</button>
+            <div class="contenido-acordeon" id="acordeon1">
+                <p>La misión de E-vio Labs es desarrollar sistemas inteligentes que optimicen procesos en hogares y empresas, mejorando la vida cotidiana mediante el uso de tecnología avanzada y diseño moderno.</p>
+            </div>
+        </div>
+    
+        <div class="acordeon">
+            <button class="btn-acordeon" onclick="toggleAcordeon(2)">¿Qué tipo de soluciones ofrece E-vio Labs?</button>
+            <div class="contenido-acordeon" id="acordeon2">
+                <p>E-vio Labs ofrece soluciones tecnológicas prácticas, como sistemas inteligentes diseñados para automatizar y optimizar procesos en diferentes entornos.</p>
+            </div>
+        </div>
+    
+        <div class="acordeon">
+            <button class="btn-acordeon" onclick="toggleAcordeon(3)">¿Qué caracteriza a los productos de E-vio Labs?</button>
+            <div class="contenido-acordeon" id="acordeon3">
+                <p>Los servicios de E-vio Labs se caracterizan por integrar diseño moderno y tecnología avanzada, ofreciendo eficiencia y funcionalidad.</p>
+            </div>
+        </div>
+    
+        <div class="acordeon">
+            <button class="btn-acordeon" onclick="toggleAcordeon(4)">¿A quién están dirigidas las soluciones de E-vio Labs?</button>
+            <div class="contenido-acordeon" id="acordeon4">
+                <p>Las soluciones de E-vio Labs están dirigidas tanto a hogares como a empresas que buscan optimizar sus procesos y mejorar su calidad de vida mediante la tecnología.</p>
+            </div>
+        </div>
+
+        <div class="acordeon">
+            <button class="btn-acordeon" onclick="toggleAcordeon(5)">¿Qué diferencia a E-vio Labs de otras empresas tecnológicas?</button>
+            <div class="contenido-acordeon" id="acordeon5">
+                <p>E-vio Labs se diferencia por su enfoque en la integración de electrónica, automatización e IoT, junto con su visión innovadora y práctica para transformar la tecnología en soluciones útiles.</p>
+            </div>
+        </div>
+
+        <div class="acordeon">
+            <button class="btn-acordeon" onclick="toggleAcordeon(6)">¿Qué significa IoT y cómo lo utiliza E-vio Labs?</button>
+            <div class="contenido-acordeon" id="acordeon6">
+                <p>IoT (Internet of Things) se refiere a la interconexión de dispositivos a través de internet para compartir datos y optimizar procesos. E-vio Labs utiliza IoT para desarrollar sistemas inteligentes que mejoran la eficiencia en hogares y empresas.</p>
+            </div>
+        </div>
+
+        <div class="acordeon">
+            <button class="btn-acordeon" onclick="toggleAcordeon(7)">¿Qué valores guían a E-vio Labs?</button>
+            <div class="contenido-acordeon" id="acordeon7">
+                <p>Los valores de E-vio Labs incluyen innovación, eficiencia, diseño moderno y compromiso con la mejora de la calidad de vida mediante la tecnología.</p>
+            </div>
+        </div>
+    </section>    
 </body>
 <footer class="pie-pagina">
     <div class="grupo-1">
